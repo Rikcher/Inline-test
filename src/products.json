@@ -1,0 +1,47 @@
+[
+    {
+        "id": "238fh3d12q",
+        "name": "Томаты на ветке красные (помидоры)",
+        "sellerName": "Натальи и Юрия Лейшан",
+        "price": 250,
+        "pricePerUnit": "/1 шт",
+        "rating": 5,
+        "image": "/src/assets/Tomatoes.jpg"
+    },
+    {
+        "id": "dle93kg7w6",
+        "name": "Молоко 3.2%",
+        "sellerName": "Вадима Рошки",
+        "price": 95,
+        "pricePerUnit": "/0.93 л",
+        "rating": 5,
+        "image": "/src/assets/Milk.png"
+    },
+    {
+        "id": "f93lsmg78q",
+        "name": "Хлеб пшеничный",
+        "sellerName": "Дарьи и Марии",
+        "price": 95,
+        "pricePerUnit": "/930 г",
+        "rating": 5,
+        "image": "/src/assets/Bread.png"
+    },
+    {
+        "id": "sl4roe403j",
+        "name": "Яйца куриные",
+        "sellerName": "Евгения Рошаль",
+        "price": 120,
+        "pricePerUnit": "/10 шт",
+        "rating": 5,
+        "image": "/src/assets/Eggs.png"
+    },
+    {
+        "id": "alf93mg82h",
+        "name": "Масло сливочное 82%",
+        "sellerName": "Вадима Рошки",
+        "price": 290,
+        "pricePerUnit": "/250 г",
+        "rating": 5,
+        "image": "/src/assets/Butter.png"
+    }
+]

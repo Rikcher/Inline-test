@@ -1,6 +1,33 @@
 import React, { createContext, useState, useEffect } from 'react';
 import ProductsData from '../products.json'
 
+//* Тут я вытягиваю продукты из json файла просто в качесвте упрощённой версии. В реальном приложении я бы сделал отдельный ProductsContext, в котором фетчил бы продукты из базы данных
+//* Ниже простенький контекст просто для примера  
+
+//* const ProductsContext = createContext();
+
+//* export const useProductsContext = () => useContext(ProductsContext);
+
+//* export const ProductsProvider = ({ children }) => {
+//*     const [products, setProducts] = useState([]);
+
+//*    const fetchProducts = async () => {
+//*         const response = await fetch('https://api-endpoint/products');
+//*         const data = await response.json();
+//*         setProducts(data);
+//*     };
+
+//*     useEffect(() => {
+//*         fetchProducts();
+//*     }, []);
+
+//*     return (
+//*         <ProductContext.Provider value={products}>
+//*             {children}
+//*         </ProductContext.Provider>
+//*     );
+//* };
+
 interface CartItemType {
     id: string;
     name: string;

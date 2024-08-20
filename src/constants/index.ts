@@ -1,4 +1,5 @@
 export const LINKS: LinkItem[] = [
+    {label: "store", path: "store"},
     {label: "about", path: "about"},
     {label: "contact", path: "contact"},
     {label: "favorites", path: "favorites"},

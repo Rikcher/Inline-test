@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom"
+import { NavLink, Outlet, useParams } from "react-router-dom"
 import { CartContext } from "../contexts/CarContext";
 import { useContext } from "react";
 
@@ -9,7 +9,14 @@ const Product = () => {
     console.log(product)
 
     return (
-        <div>Product</div>
+        <div>
+            <nav>
+                <NavLink to="#">ОПИСАНИЕ</NavLink>
+                <NavLink to="#">ОТЗЫВЫ</NavLink>
+                <NavLink to="#">ОТКУДА?</NavLink>
+            </nav>
+            <Outlet />
+        </div>
     )
 }
 

@@ -3,7 +3,7 @@ import ProductImage from "./ProductImage";
 import ProductSellerInfo from "./ProductSellerInfo";
 import ProductPrice from "./ProductPrice";
 import ProductRatings from "./ProductRatings";
-import ProductButton from "./productButton";
+import ProductButton from "./ProductButton";
 
 interface ProductCardProps {
     product: Product;

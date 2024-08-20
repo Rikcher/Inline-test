@@ -1,10 +1,13 @@
 export const LINKS: LinkItem[] = [
-    {label: "About", path: "about"},
-    {label: "Contact", path: "contact"},
-    {label: "Cart", path: "cart"},
+    {label: "about", path: "about"},
+    {label: "contact", path: "contact"},
+    {label: "favorites", path: "favorites"},
+    {label: "cart", path: "cart"},
 ]
 
 interface LinkItem {
     path: string;
     label: string;
 }
+
+export type Languages = 'ru' | 'en';

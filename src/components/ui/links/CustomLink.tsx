@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
-import { CartContext } from "../../contexts/CarContext";
+import { CartContext } from "../../../contexts/CarContext";
 import { useContext } from "react";
+import { useTranslation } from "react-i18next";
 
 interface CustomLinkProps {
     label: string;
@@ -12,14 +13,18 @@ interface CustomLinkProps {
 }
 
 const CustomLink: React.FC<CustomLinkProps> = ({ label, path, textColor, textSize, fontWeight, hoverStyle }) => {
+    const { t } = useTranslation();
     const cartContext = useContext(CartContext);
-    const cartTotal = cartContext?.getCartTotal();
+    const cartTotal = cartContext?.itemsCount;
 
     return (
         <div className='relative group'>
-            <Link className={`relative text-xl font-semibold ${textColor} ${textSize} ${fontWeight} ${hoverStyle === "underline" && "group-hover:underline"}`} to={path}>
+            <Link 
+            className={`relative ${textColor} ${textSize ? textSize : "text-xl"} ${fontWeight ? fontWeight : "font-semibold"} ${hoverStyle === "underline" && "group-hover:underline"}`} 
+            // style={{color: ""}} 
+            to={path}>
                 {label}
-                {label === "Cart" && cartTotal !== 0 && 
+                {label === t("cart") && cartTotal !== 0 && hoverStyle === "custom" &&  
                     <span className="absolute -top-1 -right-3 bg-main-light rounded-full w-4 h-4 text-xs flex justify-center items-center">
                         {cartTotal}
                     </span>

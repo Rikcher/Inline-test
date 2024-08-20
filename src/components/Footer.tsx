@@ -1,9 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import LogoReverse from '/src/assets/LogoColorReversed.svg' 
-import NavigationLinks from './ui/NavigationLinks';
+import NavigationLinks from './ui/links/NavigationLinks';
+import ExternalLink from './ui/links/ExternalLink';
+import { useTranslation } from 'react-i18next';
 
 const Footer: React.FC = () => {
+    const { t } = useTranslation();
 
     return (
         <footer className='w-full flex justify-between items-center bg-gray-600 py-5 px-10'>
@@ -12,11 +15,13 @@ const Footer: React.FC = () => {
             </Link>
             <div className='flex flex-col flex-wrap max-h-20 gap-x-5 gap-y-2 text-gray-300 text-sm font-normal'>
                 <NavigationLinks textColor='text-gray-300' textSize='text-sm' fontWeight='font-normal' hoverStyle='underline'/>
-                <a className='hover:underline' target='_blank' href="#">Personal data protection policy</a>
-                <a className='hover:underline' target='_blank' href="#">Policy on processing and protection of personal data</a>
-                <a className='hover:underline' target='_blank' href="#">Offer for provision of services</a>
             </div>
-            <p className='text-gray-300 self-end'>© 2024 Field to Fork. All rights reserved. (Updated 07/24)</p>
+            <div className='flex flex-col flex-wrap max-h-20 gap-x-5 gap-y-2 text-gray-300 text-sm font-normal'>
+                <ExternalLink label={t("footer_link_1")}/>
+                <ExternalLink label={t("footer_link_2")}/>
+                <ExternalLink label={t("footer_link_3")}/>
+            </div>
+            <p className='text-gray-300 self-end'>{t("rights_reserved")}</p>
         </footer>
     );
 };

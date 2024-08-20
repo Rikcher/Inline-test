@@ -28,18 +28,8 @@ import ProductsData from '../products.json'
 //*     );
 //* };
 
-interface CartItem {
-    id: string;
-    name: string;
-    sellerName: string;
-    price: number;
-    pricePerUnit: string;
-    quantity: number;
-    rating: number;
-    image: string;
-}
 
-interface Product {
+export interface Product {
     id: string;
     name: string;
     sellerName: string;
@@ -55,56 +45,34 @@ interface Product {
 }
 
 interface CartContextType {
-    cartItems: CartItem[];
-    addToCart: (item: CartItem) => void;
-    removeFromCart: (itemId: string) => void;
-    clearCart: () => void;
-    getCartTotal: () => number;
+    itemsCount: number;
+    addToCart: () => void;
     products: Product[];
 }
 
 export const CartContext = createContext<CartContextType | undefined>(undefined);
 
 export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-    const [cartItems, setCartItems] = useState<CartItem[]>([]);
+    const [itemsCount, setItemsCount] = useState<number>(0);
     const [products, setProducts] = useState<Product[]>(ProductsData);
 
-    const addToCart = (item: CartItem) => {
-        const existingItem = cartItems.find((cartItem) => cartItem.id === item.id);
-        if (existingItem) {
-        setCartItems(cartItems.map((cartItem) =>
-            cartItem.id === item.id ? { ...cartItem, quantity: cartItem.quantity + 1 } : cartItem
-        ));
-        } else {
-        setCartItems([...cartItems, { ...item, quantity: 1 }]);
-        }
-    };
-
-    const removeFromCart = (itemId: string) => {
-        setCartItems(cartItems.filter(item => item.id !== itemId));
-    };
-
-    const clearCart = () => {
-        setCartItems([]);
-    };
-
-    const getCartTotal = () => {
-        return cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+    const addToCart = () => {
+        setItemsCount(prevCount => prevCount + 1);
     };
 
     useEffect(() => {
-        localStorage.setItem('cartItems', JSON.stringify(cartItems));
-    }, [cartItems]);
+        localStorage.setItem('cartItemCount', JSON.stringify(itemsCount));
+    }, [itemsCount]);
 
     useEffect(() => {
-        const savedCartItems = localStorage.getItem('cartItems');
-        if (savedCartItems) {
-        setCartItems(JSON.parse(savedCartItems));
+        const savedItemCount = localStorage.getItem('cartItemCount');
+        if (savedItemCount) {
+            setItemsCount(Number(savedItemCount));
         }
     }, []);
 
     return (
-        <CartContext.Provider value={{ cartItems, addToCart, removeFromCart, clearCart, getCartTotal, products }}>
+        <CartContext.Provider value={{ itemsCount, addToCart, products }}>
         {children}
         </CartContext.Provider>
     );

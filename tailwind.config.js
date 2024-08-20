@@ -4,7 +4,12 @@ export default {
         extend: {
             colors: {
                 "main": '#429F3A', 
-                "main-light": '#B3DCAF'
+                "main-dark": '#2B7924', 
+                "main-light": '#B3DCAF',
+                "gray-dark": "#424141",
+                "gray-superdark": "#3D3C3C",
+                "gray-light": "#89817F",
+                "gray-superlight": "#A69895"
             },    
         },
     },

@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 import Logo from '/src/assets/Logo.svg'
-import NavigationLinks from './ui/NavigationLinks';
+import NavigationLinks from './ui/links/NavigationLinks';
+import LanguageChangeButton from './ui/links/LanguageChangeButton';
+
 
 const Header: React.FC = () => {
 
@@ -12,6 +14,7 @@ const Header: React.FC = () => {
                     <img src={Logo} alt="" />
                 </Link>
                 <div className='flex gap-10'>
+                    <LanguageChangeButton/>
                     <NavigationLinks hoverStyle='custom'/>
                 </div>
             </nav>

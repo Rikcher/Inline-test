@@ -28,7 +28,7 @@ import ProductsData from '../products.json'
 //*     );
 //* };
 
-interface CartItemType {
+interface CartItem {
     id: string;
     name: string;
     sellerName: string;
@@ -39,24 +39,37 @@ interface CartItemType {
     image: string;
 }
 
-type ProductType = Omit<CartItemType, 'quantity'>
+interface Product {
+    id: string;
+    name: string;
+    sellerName: string;
+    price: number;
+    pricePerUnit: string;
+    rating: number;
+    image: string;
+    description: string;
+    secondDescription?: string;
+    specifications: {label: string, value: string}[]
+    storageConditions: {label: string, value: string}[]
+    nutritions: {label: string, value: string}[]
+}
 
 interface CartContextType {
-    cartItems: CartItemType[];
-    addToCart: (item: CartItemType) => void;
+    cartItems: CartItem[];
+    addToCart: (item: CartItem) => void;
     removeFromCart: (itemId: string) => void;
     clearCart: () => void;
     getCartTotal: () => number;
-    products: ProductType[];
+    products: Product[];
 }
 
 export const CartContext = createContext<CartContextType | undefined>(undefined);
 
 export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-    const [cartItems, setCartItems] = useState<CartItemType[]>([]);
-    const [products, setProducts] = useState<ProductType[]>(ProductsData);
+    const [cartItems, setCartItems] = useState<CartItem[]>([]);
+    const [products, setProducts] = useState<Product[]>(ProductsData);
 
-    const addToCart = (item: CartItemType) => {
+    const addToCart = (item: CartItem) => {
         const existingItem = cartItems.find((cartItem) => cartItem.id === item.id);
         if (existingItem) {
         setCartItems(cartItems.map((cartItem) =>

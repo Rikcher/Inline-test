@@ -1,20 +1,18 @@
-import { NavLink, Outlet, useParams } from "react-router-dom"
-import { CartContext } from "../contexts/CarContext";
-import { useContext } from "react";
+import { Outlet, useNavigate, useParams } from "react-router-dom"
+import { useEffect } from "react";
+import ProductPageNav from "../components/ui/productPage/ProductPageNav";
 
 const Product = () => {
     const { productId } = useParams();
-    const { products } = useContext(CartContext)!
-    const product = products.find((product) => product.id === productId);
-    console.log(product)
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        navigate(`/store/${productId}/description`);
+    }, [productId]);
 
     return (
-        <div>
-            <nav>
-                <NavLink to="#">ОПИСАНИЕ</NavLink>
-                <NavLink to="#">ОТЗЫВЫ</NavLink>
-                <NavLink to="#">ОТКУДА?</NavLink>
-            </nav>
+        <div className="flex flex-col">
+            <ProductPageNav />
             <Outlet />
         </div>
     )

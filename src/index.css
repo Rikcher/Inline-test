@@ -61,9 +61,9 @@ time, mark, audio, video {
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-size: 14px;
-  font-style: normal;
-  color: #444444;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 14px;
+    font-style: normal;
+    color: #444444;
 }

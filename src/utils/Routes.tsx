@@ -5,6 +5,9 @@ import Store from "../pages/Store";
 import NotFound from "../pages/NotFound";
 import About from "../pages/About";
 import Product from "../pages/Product";
+import Description from "../components/Description";
+import Reviews from "../components/Reviews";
+import Seller from "../components/Seller";
 
 const router = createBrowserRouter([
     {
@@ -24,8 +27,22 @@ const router = createBrowserRouter([
             element: <Store />,
         },
         {
-            path: "/store/:productId",
+            path: "store/:productId",
             element: <Product />,
+            children: [
+                {
+                    path: "description",
+                    element: <Description />
+                },
+                {
+                    path: "reviews",
+                    element: <Reviews />
+                },
+                {
+                    path: "Seller",
+                    element: <Seller />
+                },
+            ]
         },
         {
             path: "about",

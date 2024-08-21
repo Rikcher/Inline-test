@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { CartContext } from "../contexts/CarContext";
 import { useContext } from "react";
-import ProductCard from "../components/ui/productCard/ProductCard";
+import ProductCard from "../components/storePage/productCard/ProductCard";
 
 const Store = () => {
     const { t } = useTranslation()

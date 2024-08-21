@@ -1,10 +1,10 @@
 import { useContext } from 'react'
 import { useParams } from 'react-router-dom';
 import { CartContext } from '../contexts/CarContext';
-import ProductSpecifications from './ui/productPage/ProductSpecifications';
-import ProductNutritions from './ui/productPage/ProductNutritions';
-import ProductStorageConditions from './ui/productPage/ProductStorageConditions';
-import ProductCard from './ui/productCard/ProductCard';
+import ProductSpecifications from './productPage/description/ProductSpecifications';
+import ProductNutritions from './productPage/description/ProductNutritions';
+import ProductStorageConditions from './productPage/description/ProductStorageConditions';
+import ProductCard from './storePage/productCard/ProductCard';
 import { useTranslation } from 'react-i18next';
 
 const Description = () => {

@@ -1,5 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { Product } from "../../../contexts/CarContext"
+import ProductDescriptionTitle from "./ProductDescriptionTitle";
+import ProductDescriptionInfo from "./ProductDescriptionInfo";
 
 interface ProductSpecificationsProps {
     product: Product | undefined;
@@ -10,17 +12,10 @@ const ProductSpecifications: React.FC<ProductSpecificationsProps> = ({ product }
 
     return (
         <div className='flex flex-col w-[30rem]'>
-            <h3 className='mb-5 font-medium'>{t("specifications")}</h3>
+            <ProductDescriptionTitle label={t("specifications")}/>
             <div className='flex flex-col gap-4'>
                 {product?.specifications.map(specification => (
-                    <div className='flex justify-between border-b border-solid border-gray-superlight border-opacity-50'>
-                        <span className='text-xs'>
-                            {specification.label}
-                        </span>
-                        <span className='text-xs'>
-                            {specification.value}
-                        </span>
-                    </div>
+                    <ProductDescriptionInfo label={specification.label} value={specification.value}/>
                 ))}
             </div>
         </div>

@@ -9,7 +9,6 @@ import useLargeScreen from '../hooks/useLargeScreen';
 const Footer: React.FC = () => {
     const { t } = useTranslation();
     const isLargeScreen = useLargeScreen();
-    console.log(isLargeScreen)
 
     return (
         <footer className={`w-full flex flex-col lg:flex-row gap-7 lg:justify-between items-center bg-gray-600 py-5 px-10`}>

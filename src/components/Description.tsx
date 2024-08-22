@@ -1,4 +1,4 @@
-import { useContext, useEffect, useRef } from 'react'
+import { useContext, useRef } from 'react'
 import { useParams } from 'react-router-dom';
 import { CartContext } from '../contexts/CartContext';
 import ProductSpecifications from './product-page/description/ProductSpecifications';

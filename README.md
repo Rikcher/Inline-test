@@ -1,50 +1,52 @@
-# React + TypeScript + Vite
+# Инлайн-тест: Junior-frontend разработчик
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Project Screenshot]('/WebsiteScreenshot.png')
 
-Currently, two official plugins are available:
+## Установка
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Проверьте наличие следующих инструментов:
+   - Node.js
+   - npm или yarn
 
-## Expanding the ESLint configuration
+2. Скопируйте репозиторий на ваш компьютер.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+3. Запустите `npm install` для загрузки зависимостей.
 
-- Configure the top-level `parserOptions` property like this:
+4. Выполните команду `npm run dev` и откройте предоставленную ссылку в браузере.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Описание проекта
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+На основе предоставленного дизайна в Figma, я роешил создать простой, но функциональный сайт. Внесены небольшие изменения, такие как добавление эффектов наведения на кнопки и формы в разделе "Оставить отзыв", чтобы улучшить пользовательский опыт. Остальная часть дизайна осталась неизменной, сохраняя минимализм и легкость. Цветовая схема соответствует оригинальному дизайну.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Структура данных
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Для имитации взаимодействия с реальным бэкендом, данные о продуктах загружаются из небольшого JSON файла. Это позволяет демонстрировать процесс получения данных без необходимости подключения к внешнему API. В реальных проектах, однако, данные о продуктах естественно будут извлекаться непосредственно через API-запросы.
+
+## Многоязычность и переводы
+
+Кроме того, я реализовал возможность перевода элементов пользовательского интерфейса. Хотя перевод данных о продуктах также предполагается осуществлять с помощью бэкенда, я предпочел сосредоточиться на основных аспектах проекта, избежав дополнительной сложности, связанной с интеграцией систем перевода.
+
+
+### Адаптивность и навигация
+
+Сайт полностью адаптирован под различные размеры экранов. Навигационное меню на мобильных устройствах свернуто в формате бургер-меню для удобства использования.
+
+### Технологии
+
+- **React** используется в качестве основной библиотеки для построения интерфейса.
+- **Tailwind CSS** выбран в качестве системы стилей за его скорость и удобство работы.
+- **React Hook Form** применяется для управления формами.
+- **TypeScript** обеспечивает строгую типизацию кода.
+- **i18next** используется для поддержки многоязычности.
+- **React Router DOM v6.26** отвечает за маршрутизацию внутри приложения.
+- **Swiper** интегрирован для создания слайдеров, работающих корректно как на десктопах, так и на мобильных устройствах.
+
+### Структура данных
+
+Данные о продуктах имитируют работу с реальным бэкендом, используя JSON файл. В реальном проекте данные будут получены через API-запросы.
+
+## Контакты
+
+Никита Медведев  
+[@Rikcher44](https://web.telegram.org/k/#@Rikcher44)  
+nick.richardson.4884@gmail.com

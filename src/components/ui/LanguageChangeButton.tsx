@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { getLastSelectedLanguage } from '../../../i18n';
-import { Languages } from '../../../constants';
-import i18n from '../../../i18n';
+import { getLastSelectedLanguage } from '../../i18n';
+import { Languages } from '../../constants';
+import i18n from '../../i18n';
 
 const LanguageChangeButton = () => {
     const lastSelectedLanguage = getLastSelectedLanguage()

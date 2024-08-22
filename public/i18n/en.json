@@ -15,5 +15,13 @@
     "specifications": "SPECIFICATIONS",
     "nutritions": "NUTRITIONS",
     "storageConditions": "STORAGE CONDITIONS",
-    "also_with_this_product": "Also bought with this product"
+    "also_with_this_product": "Also bought with this product",
+    "reviews_title": "Help us become even better. By leaving reviews, you thus point out areas for growth. We really do read all reviews.",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "comment": "Comment",
+    "reviews_submit_button": "Leave feedback",
+    "certificates": "Certificates",
+    "about_supplier": "About the supplier"
 }

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 import Logo from '/src/assets/Logo.svg'
-import NavigationLinks from './ui/links/NavigationLinks';
-import LanguageChangeButton from './ui/links/LanguageChangeButton';
+import NavigationLinks from './ui/website-navigation/NavigationLinks';
+import LanguageChangeButton from './ui/LanguageChangeButton';
 
 
 const Header: React.FC = () => {

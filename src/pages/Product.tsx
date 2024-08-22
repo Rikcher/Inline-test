@@ -1,6 +1,6 @@
 import { Outlet, useNavigate, useParams } from "react-router-dom"
 import { useEffect } from "react";
-import ProductPageNav from "../components/productPage/ProductPageNav";
+import ProductPageNav from "../components/product-page/ProductPageNav";
 
 const Product = () => {
     const { productId } = useParams();

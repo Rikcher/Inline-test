@@ -11,7 +11,7 @@ interface ProductCardProps {
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
     return (
-        <div className=" w-[17rem] rounded-[10px] flex flex-col border border-solid border-gray-300">
+        <div className="w-[17rem] rounded-[10px] flex flex-col border border-solid border-gray-300">
             <ProductImage product={product}/>
             <div className="flex justify-between pt-3.5 pb-5">
                 <div className="flex flex-col justify-between px-3">

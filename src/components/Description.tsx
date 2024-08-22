@@ -1,10 +1,10 @@
 import { useContext } from 'react'
 import { useParams } from 'react-router-dom';
 import { CartContext } from '../contexts/CarContext';
-import ProductSpecifications from './productPage/description/ProductSpecifications';
-import ProductNutritions from './productPage/description/ProductNutritions';
-import ProductStorageConditions from './productPage/description/ProductStorageConditions';
-import ProductCard from './storePage/productCard/ProductCard';
+import ProductSpecifications from './product-page/description/ProductSpecifications';
+import ProductNutritions from './product-page/description/ProductNutritions';
+import ProductStorageConditions from './product-page/description/ProductStorageConditions';
+import ProductCard from './store-page/product-card/ProductCard';
 import { useTranslation } from 'react-i18next';
 
 const Description = () => {
@@ -25,7 +25,7 @@ const Description = () => {
             <h2 className='text-[22px] font-medium mb-8'>{t("also_with_this_product")}</h2>
             <div className="flex flex-wrap gap-10">   
                 {products.map(productItem => (
-                    product?.id !== productItem.id && <ProductCard product={productItem}/>
+                    product?.id !== productItem.id && <ProductCard key={productItem.id} product={productItem}/>
                 ))}
             </div>
         </div>

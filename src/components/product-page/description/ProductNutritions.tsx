@@ -3,23 +3,23 @@ import { Product } from "../../../contexts/CarContext"
 import ProductDescriptionTitle from "./ProductDescriptionTitle";
 import ProductDescriptionInfo from "./ProductDescriptionInfo";
 
-interface ProductSpecificationsProps {
+interface ProductNutritionsProps {
     product: Product | undefined;
 }
 
-const ProductSpecifications: React.FC<ProductSpecificationsProps> = ({ product }) => {
+const ProductNutritions: React.FC<ProductNutritionsProps> = ({ product }) => {
     const { t } = useTranslation()
 
     return (
         <div className='flex flex-col w-[30rem]'>
-            <ProductDescriptionTitle label={t("specifications")}/>
+            <ProductDescriptionTitle label={t("nutritions")}/>
             <div className='flex flex-col gap-4'>
-                {product?.specifications.map(specification => (
-                    <ProductDescriptionInfo label={specification.label} value={specification.value}/>
+                {product?.nutritions.map((nutrition, index) => (
+                    <ProductDescriptionInfo key={index} label={nutrition.label} value={nutrition.value}/>
                 ))}
             </div>
         </div>
     )
 }
 
-export default ProductSpecifications
+export default ProductNutritions

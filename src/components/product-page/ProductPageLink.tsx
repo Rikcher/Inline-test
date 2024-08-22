@@ -10,8 +10,8 @@ const ProductPageLink: React.FC<ProductPageLinkProps> = ({ label, path }) => {
     const isActive = location.pathname.endsWith(`/${path}`)
 
     return (
-        <div className='relative'>   
-            <NavLink className={`text-base ${isActive ? "font-semibold" : "font-medium"} border`} to={path}>{label}</NavLink>
+        <div className="relative group">   
+            <NavLink className={`text-base ${isActive ? "font-semibold" : "font-medium"} ${!isActive && "group-hover:text-main border"}`} to={path}>{label}</NavLink>
             {isActive && <div className="w-[130%] h-1.5 bg-main absolute rounded-full -left-[15%] -bottom-5"></div>}
         </div>
     )

@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { LINKS } from '../../../constants'
-import CustomLink from './CustomLink'
+import CustomLink from './CustomLink';
 
 interface NavigationLinksProps {
     textColor?: string;
@@ -13,8 +13,8 @@ const NavigationLinks: React.FC<NavigationLinksProps> = ({ textColor, textSize, 
     const { t } = useTranslation();
 
     return (
-        LINKS.map((link) => (
-            <CustomLink label={t(link.label)} path={link.path} textColor={textColor} textSize={textSize} fontWeight={fontWeight} hoverStyle={hoverStyle}/>
+        LINKS.map((link, index) => (
+            <CustomLink key={index} label={t(link.label)} path={link.path} textColor={textColor} textSize={textSize} fontWeight={fontWeight} hoverStyle={hoverStyle}/>
         ))
     )
 }

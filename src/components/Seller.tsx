@@ -1,7 +1,10 @@
 import SellerImage from '/src/assets/SellerImage.png'
-import SellerInfoButton from './productPage/sellerInfo/SellerInfoButton'
+import SellerInfoButton from './product-page/sellerInfo/SellerInfoButton'
+import { useTranslation } from 'react-i18next'
 
 const Seller = () => {
+    const { t } = useTranslation()
+
     return (
         <div className='flex gap-40 mx-auto'>
             <div className='flex flex-col max-w-[32rem]'>
@@ -11,8 +14,8 @@ const Seller = () => {
             <div className='flex flex-col'>
                 <img src={SellerImage} alt="" />
                 <div className='flex justify-between w-full px-2'>
-                    <SellerInfoButton label="Сертификаты"/>
-                    <SellerInfoButton label="О поставщике"/>
+                    <SellerInfoButton label={t("certificates")}/>
+                    <SellerInfoButton label={t("about_supplier")}/>
                 </div>
             </div>
         </div>

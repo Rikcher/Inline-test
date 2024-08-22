@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import LogoReverse from '/src/assets/LogoColorReversed.svg' 
-import NavigationLinks from './ui/links/NavigationLinks';
-import ExternalLink from './ui/links/ExternalLink';
+import NavigationLinks from './ui/website-navigation/NavigationLinks';
+import ExternalLink from './ui/website-navigation/ExternalLink';
 import { useTranslation } from 'react-i18next';
 
 const Footer: React.FC = () => {

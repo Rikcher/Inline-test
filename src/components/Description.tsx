@@ -1,11 +1,13 @@
 import { useContext, useEffect, useRef } from 'react'
 import { useParams } from 'react-router-dom';
-import { CartContext } from '../contexts/CarContext';
+import { CartContext } from '../contexts/CartContext';
 import ProductSpecifications from './product-page/description/ProductSpecifications';
 import ProductNutritions from './product-page/description/ProductNutritions';
 import ProductStorageConditions from './product-page/description/ProductStorageConditions';
 import ProductCard from './store-page/product-card/ProductCard';
+import ProductCardMobile from './store-page/product-card-mobile/ProductCardMobile';
 import { useTranslation } from 'react-i18next';
+import useLargeScreen from '../hooks/useLargeScreen';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 
@@ -15,6 +17,7 @@ const Description = () => {
     const { products } = useContext(CartContext)!
     const product = products.find((product) => product.id === productId);
     const { t } = useTranslation()
+    const { isLargeScreen } = useLargeScreen();
 
     const swiperRef = useRef(null);
 
@@ -36,7 +39,11 @@ const Description = () => {
                 {products.map(productItem => (
                     product?.id !== productItem.id && 
                     <SwiperSlide key={productItem.id}>
-                        <ProductCard product={productItem}/>
+                        {isLargeScreen ? (
+                            <ProductCard product={productItem}/>
+                        ) : (
+                            <ProductCardMobile product={productItem}/>
+                        )}
                     </SwiperSlide>
                 ))}
             </Swiper>

@@ -79,9 +79,14 @@ body {
 }
 
 .swiper-slide {
-    width: 17rem; /* Adjust as needed */
+    width: 17rem; 
 }
 
+@media (max-width: 1024px) {
+    .swiper-slide {
+        width: 18rem; 
+    }
+}
 
 
 

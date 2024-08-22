@@ -1,4 +1,4 @@
-import { Product } from "../../../contexts/CarContext"
+import { Product } from "../../../contexts/CartContext"
 import ProductImage from "./ProductImage";
 import ProductSellerInfo from "./ProductSellerInfo";
 import ProductPrice from "./ProductPrice";

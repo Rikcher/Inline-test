@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Product } from "../../../contexts/CarContext"
+import { Product } from "../../../contexts/CartContext"
 
 interface ProductSellerInfoProps {
     product: Product;

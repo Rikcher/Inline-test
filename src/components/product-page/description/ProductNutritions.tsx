@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { Product } from "../../../contexts/CarContext"
+import { Product } from "../../../contexts/CartContext"
 import ProductDescriptionTitle from "./ProductDescriptionTitle";
 import ProductDescriptionInfo from "./ProductDescriptionInfo";
 

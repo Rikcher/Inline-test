@@ -1,4 +1,4 @@
-import { Product } from "../../../contexts/CarContext"
+import { Product } from "../../../contexts/CartContext"
 
 interface ProductRatingsProps {
     product: Product;

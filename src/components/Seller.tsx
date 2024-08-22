@@ -3,7 +3,7 @@ import SellerInfoButton from './product-page/sellerInfo/SellerInfoButton'
 import SellerDescription from './product-page/sellerInfo/SellerDescription'
 import { useTranslation } from 'react-i18next'
 import useLargeScreen from '../hooks/useLargeScreen'
-import { CartContext } from '../contexts/CarContext'
+import { CartContext } from '../contexts/CartContext'
 import { useParams } from 'react-router-dom'
 import { useContext } from 'react'
 

@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { CartContext } from "../contexts/CarContext";
+import { CartContext } from "../contexts/CartContext";
 import { useContext } from "react";
 import ProductCard from "../components/store-page/product-card/ProductCard";
 

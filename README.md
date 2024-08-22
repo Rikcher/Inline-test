@@ -1,6 +1,6 @@
 # Инлайн-тест: Junior-frontend разработчик
 
-![Project Screenshot]('/WebsiteScreenshot.png')
+![Project Screenshot]('./WebsiteScreenshot.png')
 
 ## Установка
 

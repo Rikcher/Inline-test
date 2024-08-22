@@ -1,6 +1,8 @@
 # Инлайн-тест: Junior-frontend разработчик
 
 ![Project Screenshot](./public/WebsiteScreenshot.png)
+[Design File on Figma](https://www.figma.com/design/lRCxn0GjH8vBDPi5Nq70rw/%D0%A2%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5-%D0%98%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD?node-id=0-1&t=9JCdZ5SmXAJR0Wlh-0)
+
 
 ## Установка
 

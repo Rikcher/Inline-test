@@ -4,7 +4,7 @@ interface ProductDescriptionTitleProps {
 
 const ProductDescriptionTitle: React.FC<ProductDescriptionTitleProps> = ({ label }) => {
     return (
-        <h3 className='mb-5 font-medium'>{label}</h3>
+        <h3 className='mb-4 lg:mb-5 text-[0.9375rem] lg:text-base font-semibold lg:font-medium'>{label}</h3>
     )
 }
 

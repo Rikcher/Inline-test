@@ -12,7 +12,7 @@ const Header: React.FC = () => {
     return (
         <header className='w-full flex px-10 py-5'>
             <nav className='grow flex justify-between items-center'>
-                <Link to={"/"}>
+                <Link className='mr-5 lg:mr-0' to={"/"}>
                     <img src={Logo} alt="" />
                 </Link>
                 {isLargeScreen ? (

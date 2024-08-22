@@ -17,12 +17,12 @@ const Description = () => {
         <div className='flex flex-col'>
             <p className='mb-6'>{product?.description}</p>
             <p className='mb-8'>{product?.secondDescription}</p>
-            <div className='flex flex-wrap gap-x-24 gap-y-8 max-w-full mb-14'>
+            <div className='flex flex-wrap gap-x-24 gap-y-4 lg:gap-y-8 max-w-full mb-12 lg:mb-14'>
                 <ProductSpecifications product={product}/>
                 <ProductNutritions product={product}/>
                 <ProductStorageConditions product={product}/>
             </div>
-            <h2 className='text-[22px] font-medium mb-8'>{t("also_with_this_product")}</h2>
+            <h2 className='text-[22px] font-medium mb-6 lg:mb-8'>{t("also_with_this_product")}</h2>
             <div className="flex flex-wrap gap-10">   
                 {products.map(productItem => (
                     product?.id !== productItem.id && <ProductCard key={productItem.id} product={productItem}/>

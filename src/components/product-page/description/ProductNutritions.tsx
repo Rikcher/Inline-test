@@ -13,7 +13,7 @@ const ProductNutritions: React.FC<ProductNutritionsProps> = ({ product }) => {
     return (
         <div className='flex flex-col w-[30rem]'>
             <ProductDescriptionTitle label={t("nutritions")}/>
-            <div className='flex flex-col gap-4'>
+            <div className='flex flex-col gap-3 lg:gap-4'>
                 {product?.nutritions.map((nutrition, index) => (
                     <ProductDescriptionInfo key={index} label={nutrition.label} value={nutrition.value}/>
                 ))}

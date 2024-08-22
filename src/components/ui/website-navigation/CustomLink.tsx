@@ -10,15 +10,16 @@ interface CustomLinkProps {
     textSize?: string;
     fontWeight?: string;
     hoverStyle: "custom" | "underline";
+    closeMenu?: () => void;
 }
 
-const CustomLink: React.FC<CustomLinkProps> = ({ label, path, textColor, textSize, fontWeight, hoverStyle }) => {
+const CustomLink: React.FC<CustomLinkProps> = ({ label, path, textColor, textSize, fontWeight, hoverStyle, closeMenu }) => {
     const { t } = useTranslation();
     const cartContext = useContext(CartContext);
     const cartTotal = cartContext?.itemsCount;
 
     return (
-        <div className='relative group'>
+        <div className='relative group' onClick={closeMenu}>
             <Link 
             className={`relative ${textColor} ${textSize ? textSize : "text-xl"} ${fontWeight ? fontWeight : "font-semibold"} ${hoverStyle === "underline" && "group-hover:underline"}`} 
             // style={{color: ""}} 

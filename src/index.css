@@ -67,3 +67,7 @@ body {
     font-style: normal;
     color: #444444;
 }
+
+:root:has(.no-doc-scroll) { 
+    overflow: hidden;
+}

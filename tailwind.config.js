@@ -10,7 +10,10 @@ export default {
                 "gray-superdark": "#3D3C3C",
                 "gray-light": "#89817F",
                 "gray-superlight": "#A69895"
-            },    
+            },
+            rotate: {
+                '42': '42deg',
+            }
         },
     },
     plugins: [

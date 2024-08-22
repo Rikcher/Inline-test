@@ -1,11 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 import Logo from '/src/assets/Logo.svg'
-import NavigationLinks from './ui/website-navigation/NavigationLinks';
-import LanguageChangeButton from './ui/LanguageChangeButton';
+import Navbar from './header/Navbar';
+import MobileNavbar from './header/MobileNavbar';
+import { useNavbar } from '../contexts/NavbarContext';
 
 
 const Header: React.FC = () => {
+    const { isLargeScreen } = useNavbar()
 
     return (
         <header className='w-full flex px-10 py-5'>
@@ -13,10 +15,11 @@ const Header: React.FC = () => {
                 <Link to={"/"}>
                     <img src={Logo} alt="" />
                 </Link>
-                <div className='flex gap-10'>
-                    <LanguageChangeButton/>
-                    <NavigationLinks hoverStyle='custom'/>
-                </div>
+                {isLargeScreen ? (
+                    <Navbar/>
+                ) : (
+                    <MobileNavbar/>
+                )}
             </nav>
         </header>
     );

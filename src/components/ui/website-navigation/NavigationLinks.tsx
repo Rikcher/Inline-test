@@ -7,14 +7,15 @@ interface NavigationLinksProps {
     textSize?: string;
     fontWeight?: string;
     hoverStyle: "custom" | "underline";
+    closeMenu?: () => void;
 }
 
-const NavigationLinks: React.FC<NavigationLinksProps> = ({ textColor, textSize, fontWeight, hoverStyle }) => {
+const NavigationLinks: React.FC<NavigationLinksProps> = ({ textColor, textSize, fontWeight, hoverStyle, closeMenu }) => {
     const { t } = useTranslation();
 
     return (
         LINKS.map((link, index) => (
-            <CustomLink key={index} label={t(link.label)} path={link.path} textColor={textColor} textSize={textSize} fontWeight={fontWeight} hoverStyle={hoverStyle}/>
+            <CustomLink closeMenu={closeMenu} key={index} label={t(link.label)} path={link.path} textColor={textColor} textSize={textSize} fontWeight={fontWeight} hoverStyle={hoverStyle}/>
         ))
     )
 }
